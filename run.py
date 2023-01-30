@@ -32,7 +32,7 @@ trainer = Trainer(
     accelerator="gpu",                               # 设备选择gpu
     callbacks = [checkpoint_callback],
     check_val_every_n_epoch=1,                       # 设置epoch校验的频率
-    logger=TensorBoardLogger('lightning_logs/', name='swa_AlexNet'),
+    logger=TensorBoardLogger('lightning_logs/', name='swa_'+args.model),
 )
 
 if __name__=="__main__":
